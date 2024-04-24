@@ -1,0 +1,49 @@
+.contactMainContainer{
+ display: block;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+.contactHead{
+ margin-left: 20px;
+ padding: 10px 0;
+}
+.contactHead h2{
+ font-size:25px;
+ color: #333;
+ font-family: serif;
+ text-transform: capitalize;
+}
+.contactHead h2::after{
+ content: ' _';
+}
+.contactHead h2::before{
+ content: '_ ';
+}
+.contactBody{
+ display: block;
+ max-width: 770px;
+ margin: 0 auto;
+ background-color: #cecece;
+ padding: 20px;
+ border-radius: 20px;
+}
+.contactSubBody{
+ display: flex;
+ text-align: right;
+ text-align: left;
+}
+.contactHeaderTitle{
+ width: 30%;
+ font-size: 18px;
+ color: #fefefe;
+ text-shadow: 1px 1px 1px #000;
+}
+.contactHeaderInfo{
+ width: 60%;
+ font-size: 18px;
+ color: #333;
+}
+.contactBody a{
+ text-decoration: none;
+ color: #333;
+}

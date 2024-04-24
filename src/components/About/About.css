@@ -1,0 +1,177 @@
+.aboutMainContainer{
+ max-width: 1300px;
+ padding: 10px;
+ display: block;
+ margin: 0  auto;
+ background-color: #fff;
+}
+.aboutContainer{
+ max-width: 100%;
+ height: fit-content;
+ padding:20px 10px;
+ align-items: center;
+ align-content: center;
+ display: flex;
+ justify-content: space-around;
+ background-color:lightcoral;
+ gap: 10px;
+}
+.aboutContainer h1{
+ font-size: 24px;
+ color: #333;
+ text-shadow: 1px 1px 1px #000;
+ text-transform: capitalize;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: 550;
+ line-height: 20px;
+ padding-bottom: 7px;
+ padding-left: 10px;
+}
+.aboutContainer p{
+ max-width: 700px;
+ line-height: 23px;
+ font-size: 15px;
+ font-family: sans-serif;
+ font-weight: 300;
+ color: #333;
+}
+.aboutImage{
+ max-width: 350px;
+ height: auto;
+ display: block;
+}
+@media screen and (max-width:900px) {
+ .aboutImage{
+  display: none;
+ }
+}
+.aboutImage img{
+ width: 100%;
+ height: auto;
+}
+
+         /* Mision Vision */
+
+.misVisMainContainer{
+ width: 100%;
+ min-height: 400px;
+ display: block;
+}
+.misVisContainer{
+ display: block;
+ margin-top: 10px;
+ align-items: center;
+ padding:12px;
+}
+@media screen and (min-width:950px) {
+ .misVisContainer{
+  display: flex;
+  justify-content: space-around;
+ }
+}
+.misVisContainer div{
+ min-width: 48%;
+ height: 300px;
+ border: 2px dotted lightblue;
+ text-align: center;
+ border-radius: 20px;
+ color: #333;
+ margin:10px 5px;
+ align-content: center;
+ justify-content: center;
+ align-items: center;
+ padding: 5px;
+}
+.misVisContainer p{
+ text-align: left;
+ padding: 0 10px;
+}
+
+/* reviewMainContaier */
+
+.reviewMainContaier{
+ max-width: 760px;
+ height: 100%;
+ background:url(./../../public/graduates.jpg) center no-repeat;
+ background-size: cover;
+ display: block;
+ margin: 0 auto;
+}
+.reviewTitle{
+ font-size: 26px;
+ max-width: 80%;
+ display: block;
+ margin: 0 auto;
+ margin-bottom: 20px;
+ opacity: 0.7;
+ font-family: 'Courier New', Courier, monospace;
+}
+.reviewContaier{
+ max-width: 760px;
+ min-height: fit-content;
+ padding: 20px 10px;
+ background: rgba(0, 0, 0, 0.6);
+ display: block;
+ align-content: center;
+ text-align: center;
+}
+.reviewerInfo{
+ max-width: 50%;
+ display: block;
+ margin: 0 auto;
+ line-height: 1px;
+ margin-top: -10px;
+}
+.reviewerInfo h5{
+ font-size: 17px;
+ text-align: center;
+ color: #fff;
+ text-shadow: 1px 1px 1px #000;
+}
+.reviewerInfo h6{
+ font-size: 9px;
+ margin-top: -10px;
+ margin-left: 70px;
+ text-align: center;
+ color: #cecece;
+ letter-spacing: 1px;
+}
+.reviewContaier .text{
+ color: #cffcfc;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 17px;
+ border: 1px solid gold;
+ margin: 10px;
+ padding: 5px;
+ max-width: 600px;
+ min-width: 100px;
+ display: block;
+ margin: 0 auto;
+}
+.revImgContainer{
+ display: flex;
+ align-items: center;
+ align-content: center;
+ width: 100%;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 10px;
+}
+.revImgContainer img{
+ width: 55px;
+ height: 55px;
+ border-radius: 50%;
+ display: block;
+ resize: both;
+ border: 2px solid green;
+ cursor: pointer;
+}
+.reviewPag{
+ margin-top: 10px;
+ color: #fff;
+ font-size: 20px;
+ letter-spacing: 5px;
+ display: flex;
+ justify-content: space-around;
+}
+
