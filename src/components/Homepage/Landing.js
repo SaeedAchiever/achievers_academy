@@ -1,9 +1,31 @@
-import React,{useState} from 'react'
+import React,{useState, useRef} from 'react'
 import './HomeStyle.css'
+
+import emailjs  from  '@emailjs/browser'
 
 
 function Landing() {
 
+  const form  = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ljdzcd8', 'template_vyqt0ai', form.current, {
+        publicKey: 'J-x5rvf886lZorxIC',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -37,33 +59,25 @@ function Landing() {
           <div className="popup-content">
             <h3>Submit the form below to get started</h3>
             
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
 
-              <input  type='text' placeholder='First Name *' required/>
-
-              <input  type='text'placeholder='Last Name *'  required/>
-
-              <input  type='text'placeholder='School *' required/>
-
-              <input  type='text'placeholder='Loaction *' required/>
+              <input  type='text' placeholder='Full Name *' name='from_name' required/>
 
 
-              <input  type='email'placeholder='Email'/>
+              <input  type='text'placeholder='School *' name='from_school' required/>
+
+              <input  type='text'placeholder='Loaction *' name='from_location' required/>
+
+
+              <input  type='email'placeholder='Email' name='from_email'/>
               
-              <input  type='telephone'placeholder='Phone Number *' required/>
+              <input  type='number'placeholder='Phone Number *'  name='from_phone' required/>
 
               
-              <select>
-                <option>Am a... *</option>
-                <option>Parent</option>
-                <option>Student</option>
-                <option>School Owner</option>
-                <option>Other Staff</option>
-                <option>Prefer Not To Say</option>
-              </select>
+              <input  type='text' placeholder='I am a e.g Student'  name='from_personality'/>
 
 
-              <textarea placeholder='Enter Addtional Info Here...'>
+              <textarea placeholder='Enter Addtional Info Here...'  name='message'>
 
               </textarea>
 
